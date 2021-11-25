@@ -41,6 +41,7 @@
         "@ngrx/schematics": "^8.4.0",
         "@ngrx/store": "^8.4.0",
         "@ngrx/store-devtools": "^8.4.0",
+        "@nguniversal/express-engine": "*",
         "@types/hammerjs": "^2.0.36",
         "@types/mousetrap": "^1.6.3",
         "bootstrap": "^4.3.1",
