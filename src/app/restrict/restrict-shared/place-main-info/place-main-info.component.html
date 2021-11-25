@@ -6,14 +6,9 @@
             <mat-form-field class="col">
                 <mat-label>My guest can book?</mat-label>
                 <mat-select (valueChange)="whenPlaceTypeChange($event)" #palceTypeCtrl formControlName="type" required>
-                    <!-- <mat-option *ngFor="let type of (this.resources$ | async).placesTypes | placesTypes:{canBeBooked:true }"
-                      [value]="type.id">
-            {{type.name_en}}
-          </mat-option> -->
-                    <mat-option *ngFor="let type of testTypes" [value]="type.id">
+                    <mat-option *ngFor="let type of (this.resources$ | async).placesTypes | placesTypes:{canBeBooked:true }" [value]="type.id">
                         {{type.name_en}}
                     </mat-option>
-
                 </mat-select>
             </mat-form-field>
 
