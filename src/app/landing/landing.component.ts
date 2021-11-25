@@ -7,6 +7,7 @@ import { MediaMatcher } from '@angular/cdk/layout'
   styleUrls: ['./landing.component.scss']
 })
 export class LandingComponent implements OnInit, OnDestroy {
+
   mobileQuery: MediaQueryList
 
   private mobileQueryListener: () => void
@@ -20,16 +21,12 @@ export class LandingComponent implements OnInit, OnDestroy {
     this.mobileQuery.addListener(this.mobileQueryListener)
   }
 
-
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
   ngOnDestroy(): void {
     // until  onchange is supported  https://developer.mozilla.org/en-US/docs/Web/API/MediaQueryList/onchange
     // tslint:disable-next-line: deprecation
     this.mobileQuery.removeListener(this.mobileQueryListener)
   }
-
-
 
 }

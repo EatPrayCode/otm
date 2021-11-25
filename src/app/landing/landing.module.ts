@@ -5,10 +5,10 @@ import { LandingSharedModule } from './landing-shared/landing-shared.module'
 import { LandingToolbarComponent } from './landing-toolbar/landing-toolbar.component'
 import { LandingComponent } from './landing.component'
 
-
-
 @NgModule({
-  declarations: [LandingComponent, LandingToolbarComponent],
+  declarations: [
+    LandingComponent, LandingToolbarComponent
+  ],
   imports: [
     CommonModule,
     LandingRoutingModule,

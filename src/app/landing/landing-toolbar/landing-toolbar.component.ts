@@ -20,6 +20,7 @@ export class LandingToolbarComponent implements OnInit {
   user$: Observable<IUser>
   user: IUser
   auth$: Observable<IAuthState>
+  
   constructor(private store: Store<AppState>) {
     this.user$ = this.store.select('user')
     this.auth$ = this.store.select('auth')
@@ -36,9 +37,11 @@ export class LandingToolbarComponent implements OnInit {
   async logInWithFacebook() {
     this.store.dispatch(new authActions.FacebookLogin())
   }
+
   async logInWithgoogle() {
     this.store.dispatch(new authActions.GoogleLogin())
   }
+
   get IsHost(): boolean {
     return Array.isArray(this.user.roles) && this.user.roles.includes(Role.Host)
   }
