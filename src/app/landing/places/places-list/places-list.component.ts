@@ -42,7 +42,6 @@ export class PlacesListComponent implements OnInit {
   }
 
   openPlace(place) {
-    console.log(place)
     this.router.navigate([place.id], { relativeTo: this.activatedRoute })
   }
 

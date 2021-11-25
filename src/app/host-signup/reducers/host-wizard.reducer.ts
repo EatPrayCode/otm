@@ -8,8 +8,8 @@ export const hostWizardFeatureKey = 'hostWizard'
 
 
 
-export const initialState = new HostWizard(20)
-console.log(initialState)
+export const initialState = new HostWizard(20);
+
 export function reducer(state = initialState, action: HostWizardActions): Partial<IHostWizard> {
   switch (action.type) {
 

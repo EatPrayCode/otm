@@ -10,7 +10,6 @@ export class PlacesPipe implements PipeTransform {
 
   transform(places: IPlace[], filter: IPlacesFilter): any {
     let filterPlaces = places
-    console.log(filter)
     if (filter) {
       filterPlaces = places.filter((place) => {
         let match = true

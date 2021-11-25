@@ -23,13 +23,11 @@ export class BookingEffects {
     // withLatestFrom(this.store.select(bookingSelector.getBookingsFeature)),
     // we can use this filter later to avoid subscribing if the app is offline
     // filter((res: any) => {
-    //   console.log(res)
     //   return true if i'm online
     // }),
     // Don't handle more than one load request at a time.
     exhaustMap(() => this.afs.collection<IBooking>(`bookings`).valueChanges().pipe(
       map(result => {
-        console.log(result)
         return new bookingsActions.LoadBookings({ bookings: result, subscribed: true })
       })
     ))

@@ -31,7 +31,6 @@ export class PlaceWizardEffects {
   updatePlace$ = this.actions$.pipe(
     ofType(placeWizardActions.PlaceWizardActionTypes.UpdatePlace),
     map((action) => {
-      console.log(action)
       return new placesActions.UpdatePlace({
         place: {
           id: action.payload.id,

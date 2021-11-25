@@ -14,7 +14,6 @@ export class LandingComponent implements OnInit, OnDestroy {
 
   constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher) {
     this.mobileQuery = media.matchMedia('(max-width: 600px)')
-    console.log(this.mobileQuery)
     this.mobileQueryListener = () => changeDetectorRef.detectChanges()
     // until  onchange is supported  https://developer.mozilla.org/en-US/docs/Web/API/MediaQueryList/onchange
     // tslint:disable-next-line: deprecation

@@ -50,7 +50,6 @@ export class EditPlaceImagesComponent implements OnInit, AfterViewInit, OnChange
   }
   ngOnInit() {
     this.updateImagesArray(this.place.photos)
-    console.log(this.place)
   }
 
   setImageURL(photo, img: ElementRef) {

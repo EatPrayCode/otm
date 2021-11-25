@@ -13,7 +13,6 @@ export function reducer(state: Partial<IUser> = defaultUser, action: UserActions
       return { ...state, loading: true }
 
     case ActionTypes.GET_USER_SUCCESS:
-      console.log(action)
       return { ...state, ...action.payload, loading: false }
 
     case ActionTypes.GET_USER_FAIL:

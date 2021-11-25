@@ -27,8 +27,7 @@ export class BookingsListComponent implements OnInit {
 
   addNewBookingModal() {
     this.matDialog.open(AddNewBookingComponent).afterClosed().subscribe((res) => {
-      console.log(res)
-    })
+    });
   }
 
 }

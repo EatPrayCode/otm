@@ -80,7 +80,6 @@ export class PlaceEffects {
       return combineLatest(resources)
     }),
     map((res: any) => {
-      console.log(res)
       return new placesActions.UpdateCurrentPlace({ host: res[0], ...res[1], bookings: res[2] })
     }),
     catchError(error => EMPTY)

@@ -55,8 +55,10 @@ export function reducer(
       return adapter.removeMany(action.payload.ids, state)
     }
 
-    case BookingActionTypes.LoadBookingsInit:
-      return { ...state, loading: state.subscribed ? false : true }
+    case BookingActionTypes.LoadBookingsInit: {
+      return { ...state, loading: state.subscribed ? false : true };
+    }
+
 
     case BookingActionTypes.LoadBookings: {
       return adapter.addAll(action.payload.bookings,

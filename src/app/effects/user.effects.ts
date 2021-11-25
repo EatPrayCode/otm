@@ -73,7 +73,6 @@ export class UserEffects {
   updateUser = this.actions$.pipe(
     ofType(userActions.ActionTypes.UPDATE_USER),
     map((action) => {
-      console.log(action)
       return action
     }),
     switchMap((action) => from(this.afs.doc(`users/${action.payload.uid}`).set(action.payload, { merge: true }))),

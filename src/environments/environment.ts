@@ -5,14 +5,13 @@
 export const environment = {
   production: false,
   firebase: {
-    apiKey: 'AIzaSyCwjRqTOl6DbkMW95lz0xtogU9flh78KqU',
-    authDomain: 'dahab-guide-staging.firebaseapp.com',
-    databaseURL: 'https://dahab-guide-staging.firebaseio.com',
-    projectId: 'dahab-guide-staging',
-    storageBucket: 'dahab-guide-staging.appspot.com',
-    messagingSenderId: '185135996612',
-    appId: '1:185135996612:web:cf9c71b287a47fb4b57391',
-    measurementId: 'G-0JMCSM1JJC'
+    apiKey: "AIzaSyAtrVxEc8Gx167bQ8qVwDrCunOUYl_DRMA",
+    authDomain: "mrshop-overthemoon.firebaseapp.com",
+    projectId: "mrshop-overthemoon",
+    storageBucket: "mrshop-overthemoon.appspot.com",
+    messagingSenderId: "248360212765",
+    appId: "1:248360212765:web:9acfc85d0c3d7865d7e9f4",
+    measurementId: "G-ZNWPH8SFV2"
   }
 }
 

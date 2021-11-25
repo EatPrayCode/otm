@@ -49,13 +49,11 @@ export class PlacesFilterComponent implements OnInit {
   }
 
   ngOnInit() {
-
   }
+
   updateState(formValue) {
-    console.log(formValue)
     this.store.dispatch(new placesActions.UpdatePlacesFilter({ placesFilter: formValue }))
   }
-
 
   onLongTermChange(value) {
     this.filterFormGroup.controls.date.reset()

@@ -17,10 +17,10 @@ export class BookingMinionService {
   }
 
   // the work of this service is related and based ALWAYS AND ONLY on the currentPlace state
-  futureBookings: Array<IBooking>
+  futureBookings: Array<IBooking> = [];
   constructor(private store: Store<AppState>) {
     this.store.select(placesSelector.getCurrentPlace).subscribe((currentPlace) => {
-      this.futureBookings = currentPlace.bookings
+      this.futureBookings = currentPlace.bookings || []
     })
   }
 
