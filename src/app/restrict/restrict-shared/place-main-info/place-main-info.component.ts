@@ -24,7 +24,11 @@ export class PlaceMainInfoComponent implements OnInit, OnChanges {
   placeInfoFormGroup: FormGroup
   resources$: Observable<IResources>
   placeWizard$: Observable<IPlaceWizard>
-  mode = PlaceWizardMode
+  mode = PlaceWizardMode;
+  testTypes:any = [{
+    id: 'id',
+    name_en: 'name_en'
+  }]
   constructor(
     private formBuilder: FormBuilder, private store: Store<AppState & IPlaceWizardState>,
     private matSnackBar: MatSnackBar
