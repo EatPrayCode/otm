@@ -1,0 +1,36 @@
+mat-form-field {
+  mat-progress-bar {
+    top: 6px !important;
+  }
+}
+
+.mat-select-panel {
+  max-height: 50vh !important;
+}
+
+
+mat-checkbox {
+  label {
+    margin-bottom: 0;
+  }
+}
+
+// .mat-stepper-horizontal,
+// .mat-stepper-vertical {
+//   background-color: rgba(white, 0.4)
+// }
+
+.mat-card {
+  background: rgba(white, 0.6)
+}
+
+
+// mat snackbar
+.mat-simple-snackbar-action {
+  color: white !important;
+}
+
+.mat-simple-snackbar {
+  white-space: pre-line;
+  font-size: 16px;
+}

@@ -1,0 +1,71 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'bootstrap';
+@import 'variables';
+
+@import 'material-theme';
+@import 'material.component';
+@import 'mixins';
+
+body {
+  // pwa disable highlight and text selection and callouts
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  // pwa end
+  background-color: $app-background !important;
+
+  // :focus:not(button) {
+  //   outline: #009688 auto 4px;
+  // }
+
+  .mat-button-base:focus {
+    outline: none;
+  }
+}
+
+:focus {
+  outline: #e64a19 auto 1px;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.loading-shade {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.15);
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px !important;
+}
+
+.float-bottom {
+  position: fixed !important;
+  bottom: 1rem;
+  right: 1rem;
+}
+
+.sticky-bottom {
+  position: sticky;
+  bottom: 0;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}

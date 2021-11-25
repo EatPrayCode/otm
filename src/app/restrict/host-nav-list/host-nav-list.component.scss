@@ -1,0 +1,14 @@
+@import "src/sass/variables";
+
+.router-link-active {
+  background: #cfd8dc50;
+}
+
+.nav-btn {
+
+  &:hover,
+  & {
+    border-radius: 0 25px 25px 0;
+    outline: 0 25px 25px 0;
+  }
+}

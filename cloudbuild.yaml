@@ -1,0 +1,23 @@
+steps:
+# Install node packages
+- name: node:12.4.0
+  entrypoint: npm
+  args: ['install']
+
+# Lint
+- name: node:12.4.0
+  entrypoint: npm
+  args: ['run', 'lint']
+
+# test
+# - name: 'gcr.io/cloud-builders/npm:current'
+#   args: ['run', 'test:headless']
+# Build
+- name: node:12.4.0
+  entrypoint: npm
+  args: ['run', 'build-${_ENV}']
+# Deploy
+- name: 'gcr.io/$PROJECT_ID/firebase'
+  args: ['use' , '${_FIREBASE_PROJECT}', '--token', '${_FIREBASE_TOKEN}' ]
+- name: 'gcr.io/$PROJECT_ID/firebase'
+  args: ['deploy','--debug', '--token', '${_FIREBASE_TOKEN}' , '--only', 'hosting:${_FIREBASE_TARGET}']
