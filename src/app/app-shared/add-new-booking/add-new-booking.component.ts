@@ -60,6 +60,23 @@ export class AddNewBookingComponent implements OnInit {
   }
 
   book(formValue) {
+    const toDate = formValue.fromDate;
+    let monthsCount = 0;
+    const stayPeriod = formValue.stayPeriod;
+    if (stayPeriod === '12m') {
+      monthsCount = 12;
+    }
+    else if (stayPeriod === '6m') {
+      monthsCount = 6;
+    }
+    else if (stayPeriod === '3m') {
+      monthsCount = 3;
+    }
+    else{
+      monthsCount = 1;
+    }
+    const newDate = new Date(toDate.setMonth(toDate.getMonth() + monthsCount));
+    formValue = { ...formValue, toDate: newDate };
     this.store.dispatch(new bookingActions.AddBooking({
       booking: { ...formValue, id: this.id, creatorId: this.creatorId, placeId: this.placeId }
     }))
@@ -68,7 +85,6 @@ export class AddNewBookingComponent implements OnInit {
       if (b.saving) { return } // skip if it's still saving
       if (b.error) {
         this.snackbar.error('Something went wrong, please try again')
-
       } else {
         this.bottomSheetRef.dismiss()
         this.snackbar.success('We will process your request and get back to you the soonest')
